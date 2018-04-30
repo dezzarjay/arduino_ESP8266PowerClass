@@ -18,15 +18,18 @@ ESP8266PowerClass *mgos_ESP8266PowerClass_begin() {
 } */
 
 void mgos_ESP8266PowerClass_enableMeasurePower(ESP8266PowerClass *hlw) {
-     return (hlw == nullptr) ? -1 : hlw->enableMeasurePower();
+    if (hlw == nullptr) return;
+    hlw->enableMeasurePower();
 }
 
 void mgos_ESP8266PowerClass_selectMeasureCurrentOrVoltage(ESP8266PowerClass *hlw, char* dev_type) {
-     return (hlw == nullptr) ? -1 : hlw->selectMeasureCurrentOrVoltage(dev_type);
+     if (hlw == nullptr) return;
+     hlw->selectMeasureCurrentOrVoltage(dev_type);
 }
 
 void mgos_ESP8266PowerClass_setPowerParam(ESP8266PowerClass *hlw, double param_a,double param_b) {
-     return (hlw == nullptr) ? -1 : hlw->setPowerParam(param_a, param_b);
+     if (hlw == nullptr) return;
+     hlw->setPowerParam(param_a, param_b);
 }
 
 double mgos_ESP8266PowerClass_setCurrentParam(ESP8266PowerClass *hlw, double param_a,double param_b) {
@@ -51,19 +54,16 @@ void mgos_ESP8266PowerClass_startMeasure(ESP8266PowerClass *hlw) {
 }
 
 double mgos_ESP8266PowerClass_getPower(ESP8266PowerClass *hlw) {
-  if (hlw == nullptr) return;
-  hlw->getPower();
+  return (hlw == nullptr) ? -1 : hlw->getPower();
 }
 
 double mgos_ESP8266PowerClass_getCurrFrequency(ESP8266PowerClass *hlw) {
-  if (hlw == nullptr) return;
-  hlw->getCurrFrequency();
+  return (hlw == nullptr) ? -1 : hlw->getCurrFrequency();
 }
 
 
 double mgos_ESP8266PowerClass_getVoltage((ESP8266PowerClass *hlw) {
-  if (hlw == nullptr) return;
-  hlw->getVoltage(();
+  return (hlw == nullptr) ? -1 : hlw->getVoltage();
 }
 
 
