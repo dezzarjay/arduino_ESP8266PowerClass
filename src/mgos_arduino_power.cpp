@@ -4,7 +4,7 @@
 #include "mgos_arduino_power.h"
 
 ESP8266PowerClass *mgos_ESP8266PowerClass_create(int8_t power_pin,int8_t current_voltage_pin,int8_t sel_pin) {
-  return new ESP8266PowerClass(power_pin, current_voltage_pin, sel_pin, sel_pin);
+  return new ESP8266PowerClass(power_pin, current_voltage_pin, sel_pin);
 }
 
 ESP8266PowerClass *mgos_ESP8266PowerClass_begin() {
@@ -17,7 +17,7 @@ ESP8266PowerClass *mgos_ESP8266PowerClass_begin() {
   hlw->setMode(mode);
 } */
 
-void mgos_ESP8266PowerClass_enableMeasurePower((ESP8266PowerClass *hlw) {
+void mgos_ESP8266PowerClass_enableMeasurePower(ESP8266PowerClass *hlw) {
      return (hlw == nullptr) ? -1 : hlw->enableMeasurePower();
 }
 
