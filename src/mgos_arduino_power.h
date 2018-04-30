@@ -17,7 +17,7 @@ ESP8266PowerClass *mgos_ESP8266PowerClass_begin();
 
 void mgos_ESP8266PowerClass_enableMeasurePower(ESP8266PowerClass *hlw);
 
-void mgos_ESP8266PowerClass_selectMeasureCurrentOrVoltage(ESP8266PowerClass *hlw, char* dev_type);
+void mgos_ESP8266PowerClass_selectMeasureCurrentOrVoltage(ESP8266PowerClass *hlw, char dev_type);
 
 void mgos_ESP8266PowerClass_setPowerParam(ESP8266PowerClass *hlw, double param_a,double param_b);
 
