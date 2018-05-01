@@ -22,10 +22,11 @@ void mgos_ESP8266PowerClass_enableMeasurePower(ESP8266PowerClass *hlw) {
     hlw->enableMeasurePower();
 }
 
-void mgos_ESP8266PowerClass_selectMeasureCurrentOrVoltage(ESP8266PowerClass *hlw, char* dev_type) {
+//Need to find out how to bring in the MEASURETYPE enum into this
+/*void mgos_ESP8266PowerClass_selectMeasureCurrentOrVoltage(ESP8266PowerClass *hlw, char dev_type) {
      if (hlw == nullptr) return;
      hlw->selectMeasureCurrentOrVoltage(dev_type);
-}
+}*/
 
 void mgos_ESP8266PowerClass_setPowerParam(ESP8266PowerClass *hlw, double param_a,double param_b) {
      if (hlw == nullptr) return;
